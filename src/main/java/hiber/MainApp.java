@@ -41,7 +41,7 @@ public class MainApp {
          System.out.println();
       }
       //Метод достающий владельца. Возвращает Лист т.к. в БД могут быть одинаковые машины.
-      List<User> userByCar = userService.getUserByCar("BMW",13);
+      List<User> userByCar = userService.getUserByCarModelAndSeries("BMW",13);
       for (User user : userByCar) {
          Car usersCar = user.getCar();//Показать машину - для наглядности
          System.out.println("Car = "+ usersCar.getModel()+ " "+ usersCar.getSeries());
